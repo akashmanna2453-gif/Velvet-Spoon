@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Maison Étoile is a luxury restaurant experience blending fine dining, elegant interiors, and unforgettable service."
+    />
+    <title>Maison Étoile | Luxury Dining</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Cormorant+Garamond:wght@500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="loading-screen" aria-hidden="true">
+      <div class="loader-rings">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <p>Preparing your experience</p>
+    </div>
+
+    <div class="cursor-dot" aria-hidden="true"></div>
+    <div class="cursor-ring" aria-hidden="true"></div>
+    <div class="progress-bar" aria-hidden="true"></div>
+
+    <header class="site-header">
+      <nav class="navbar">
+        <a class="brand" href="#home">
+          <span class="brand-mark">ME</span>
+          <span>Maison Étoile</span>
+        </a>
+
+        <button class="menu-toggle" aria-label="Open navigation" aria-expanded="false">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+
+        <ul class="nav-links">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#menu">Menu</a></li>
+          <li><a href="#chef">Chef</a></li>
+          <li><a href="#gallery">Gallery</a></li>
+          <li><a href="#reservation">Reservation</a></li>
+          <li><a href="#testimonials">Testimonials</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero" id="home">
+        <video class="hero-video" autoplay muted loop playsinline poster="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=1400&q=80">
+          <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4" />
+        </video>
+        <div class="hero-overlay"></div>
+        <div class="hero-glow hero-glow-one"></div>
+        <div class="hero-glow hero-glow-two"></div>
+
+        <div class="hero-content reveal">
+          <p class="eyebrow">Fine Dining • Private Dining • Sommelier Pairing</p>
+          <h1 id="hero-title">Experience Fine Dining Like Never Before</h1>
+          <p class="hero-copy">
+            Taste crafted with passion, drama, and a touch of midnight glamour.
+          </p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#reservation">Reserve Table</a>
+            <a class="btn btn-secondary" href="#menu">Explore Menu</a>
+          </div>
+          <div class="hero-meta">
+            <span>Open nightly from 6 PM</span>
+            <span>Michelin-inspired cuisine</span>
+          </div>
+          <div class="hero-scroll">
+            <span></span>
+            <p>Scroll to discover</p>
+          </div>
+        </div>
+
+        <div class="floating-particle particle-1"></div>
+        <div class="floating-particle particle-2"></div>
+        <div class="floating-particle particle-3"></div>
+      </section>
+
+      <section class="section about" id="about">
+        <div class="section-heading reveal">
+          <p class="eyebrow">About Maison Étoile</p>
+          <h2>Where luxury, comfort, and culinary artistry meet.</h2>
+          <p>
+            Our kitchen draws from seasonal produce, heritage recipes, and contemporary technique to create an unforgettable evening.
+          </p>
+        </div>
+
+        <div class="about-grid">
+          <div class="about-image reveal">
+            <img src="https://images.unsplash.com/photo-1559339352-11d035aa65de?auto=format&fit=crop&w=1200&q=80" alt="Luxury dining room at an upscale restaurant" loading="lazy" />
+            <div class="image-badge">Awarded 4.9/5 by renowned critics</div>
+          </div>
+
+          <div class="about-content">
+            <div class="about-card reveal">
+              <h3>Fresh ingredients, timeless craft</h3>
+              <p>
+                We source the finest seafood, rare spices, and garden-grown herbs to compose every plate with unveiled elegance.
+              </p>
+            </div>
+            <div class="about-card reveal">
+              <h3>Signature service from dawn to dessert</h3>
+              <p>
+                From the first pour to the final course, our team offers attentive service with quiet confidence and warmth.
+              </p>
+            </div>
+            <div class="about-counters">
+              <div class="counter-card reveal">
+                <strong data-counter="20">0</strong>
+                <span>Years of Craft</span>
+              </div>
+              <div class="counter-card reveal">
+                <strong data-counter="10000">0</strong>
+                <span>Guests Annually</span>
+              </div>
+              <div class="counter-card reveal">
+                <strong data-counter="35">0</strong>
+                <span>Awards Won</span>
+              </div>
+              <div class="counter-card reveal">
+                <strong data-counter="250">0</strong>
+                <span>Dishes Served</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section menu-section" id="menu">
+        <div class="section-heading reveal">
+          <p class="eyebrow">Featured Menu</p>
+          <h2>An evening of elegant flavors, thoughtfully composed.</h2>
+        </div>
+
+        <div class="menu-toolbar reveal">
+          <div class="search-box">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M10 4a6 6 0 1 1 0 12 6 6 0 0 1 0-12Zm0 0 8 8" /></svg>
+            <input type="search" id="menu-search" placeholder="Search dishes" />
+          </div>
+          <div class="filter-group" role="tablist" aria-label="Menu categories">
+            <button class="filter-btn active" data-filter="all">All</button>
+            <button class="filter-btn" data-filter="starter">Starter</button>
+            <button class="filter-btn" data-filter="main">Main Course</button>
+            <button class="filter-btn" data-filter="dessert">Dessert</button>
+            <button class="filter-btn" data-filter="drinks">Drinks</button>
+          </div>
+        </div>
+
+        <div class="menu-grid">
+          <article class="menu-card reveal" data-category="starter" data-name="Truffle Tartlet">
+            <img src="https://images.unsplash.com/photo-1555949258-eb67b1ef0ceb?auto=format&fit=crop&w=900&q=80" alt="Truffle tartlet" loading="lazy" />
+            <div class="menu-card-body">
+              <div class="menu-card-top">
+                <h3>Truffle Tartlet</h3>
+                <button class="favorite-btn" aria-label="Favorite dish">♡</button>
+              </div>
+              <p>Wild mushrooms, chive cream, and black truffle oil.</p>
+              <div class="menu-card-bottom">
+                <span>$24</span>
+                <span>★★★★★</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="menu-card reveal" data-category="main" data-name="Cedar Glazed Lamb">
+            <img src="https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=900&q=80" alt="Cedar glazed lamb" loading="lazy" />
+            <div class="menu-card-body">
+              <div class="menu-card-top">
+                <h3>Cedar Glazed Lamb</h3>
+                <button class="favorite-btn" aria-label="Favorite dish">♡</button>
+              </div>
+              <p>Charred heirloom vegetables and smoked jus.</p>
+              <div class="menu-card-bottom">
+                <span>$42</span>
+                <span>★★★★★</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="menu-card reveal" data-category="dessert" data-name="Saffron Panna Cotta">
+            <img src="https://images.unsplash.com/photo-1488477181946-6428a0291777?auto=format&fit=crop&w=900&q=80" alt="Saffron panna cotta" loading="lazy" />
+            <div class="menu-card-body">
+              <div class="menu-card-top">
+                <h3>Saffron Panna Cotta</h3>
+                <button class="favorite-btn" aria-label="Favorite dish">♡</button>
+              </div>
+              <p>Poached pear, honeyed pistachio, and citrus blossom.</p>
+              <div class="menu-card-bottom">
+                <span>$18</span>
+                <span>★★★★★</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="menu-card reveal" data-category="drinks" data-name="Golden Citrus Spritz">
+            <img src="https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?auto=format&fit=crop&w=900&q=80" alt="Craft cocktail" loading="lazy" />
+            <div class="menu-card-body">
+              <div class="menu-card-top">
+                <h3>Golden Citrus Spritz</h3>
+                <button class="favorite-btn" aria-label="Favorite dish">♡</button>
+              </div>
+              <p>Aromatic aperitif with citrus, thyme, and champagne.</p>
+              <div class="menu-card-bottom">
+                <span>$16</span>
+                <span>★★★★★</span>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="section chef-section" id="chef">
+        <div class="chef-content reveal">
+          <div class="chef-portrait">
+            <img src="https://images.unsplash.com/photo-1583394293214-28ded15ee548?auto=format&fit=crop&w=900&q=80" alt="Head chef preparing a plated meal" loading="lazy" />
+          </div>
+          <div class="chef-details">
+            <p class="eyebrow">Our Chef</p>
+            <h2>Chef Elena Voss</h2>
+            <p>
+              A former Michelin laureate, Elena transforms heritage flavors into luminous plates with precise elegance and emotional storytelling.
+            </p>
+            <ul class="chef-achievements">
+              <li>Three-time James Beard finalist</li>
+              <li>Private dining curator for royal guests</li>
+              <li>Signature dish: Ember-Roasted Sea Bass</li>
+            </ul>
+            <div class="social-links">
+              <a href="#" aria-label="Instagram">Instagram</a>
+              <a href="#" aria-label="Threads">Threads</a>
+              <a href="#" aria-label="TikTok">TikTok</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section gallery-section" id="gallery">
+        <div class="section-heading reveal">
+          <p class="eyebrow">Gallery</p>
+          <h2>Moments shaped by candlelight and polished detail.</h2>
+        </div>
+
+        <div class="gallery-grid">
+          <figure class="gallery-item reveal"><img src="https://images.unsplash.com/photo-1514933651103-005eec06c04b?auto=format&fit=crop&w=900&q=80" alt="Elegant dining table" loading="lazy" /></figure>
+          <figure class="gallery-item reveal large"><img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=1200&q=80" alt="Restaurant interior" loading="lazy" /></figure>
+          <figure class="gallery-item reveal"><img src="https://images.unsplash.com/photo-1551218808-94e220e084d2?auto=format&fit=crop&w=900&q=80" alt="Chef plating a dish" loading="lazy" /></figure>
+          <figure class="gallery-item reveal"><img src="https://images.unsplash.com/photo-1559339352-11d035aa65de?auto=format&fit=crop&w=900&q=80" alt="Premium dining room" loading="lazy" /></figure>
+          <figure class="gallery-item reveal"><img src="https://images.unsplash.com/photo-1528605248644-14dd04022da1?auto=format&fit=crop&w=900&q=80" alt="Guest enjoying dinner" loading="lazy" /></figure>
+        </div>
+      </section>
+
+      <section class="section reservation-section" id="reservation">
+        <div class="reservation-card reveal">
+          <div class="reservation-copy">
+            <p class="eyebrow">Reservation</p>
+            <h2>Reserve your table for an evening of indulgence.</h2>
+            <p>
+              Private dining, romantic evenings, and celebratory dinners are available by request.
+            </p>
+            <div class="live-clock" id="live-clock">Loading time…</div>
+          </div>
+
+          <form class="reservation-form" id="reservation-form">
+            <div class="form-row">
+              <input type="text" name="name" placeholder="Full Name" required />
+              <input type="email" name="email" placeholder="Email" required />
+            </div>
+            <div class="form-row">
+              <input type="tel" name="phone" placeholder="Phone" required />
+              <select name="guests" required>
+                <option value="">Guests</option>
+                <option>2 Guests</option>
+                <option>4 Guests</option>
+                <option>6 Guests</option>
+                <option>8+ Guests</option>
+              </select>
+            </div>
+            <div class="form-row">
+              <input type="date" name="date" required />
+              <input type="time" name="time" required />
+            </div>
+            <textarea name="request" rows="4" placeholder="Special request"></textarea>
+            <button class="btn btn-primary" type="submit">Book Now</button>
+          </form>
+        </div>
+      </section>
+
+      <section class="section testimonials-section" id="testimonials">
+        <div class="section-heading reveal">
+          <p class="eyebrow">Testimonials</p>
+          <h2>Guests return for the atmosphere, the service, and the flavors.</h2>
+        </div>
+
+        <div class="testimonial-slider reveal">
+          <article class="testimonial-card active">
+            <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=200&q=80" alt="Guest portrait" loading="lazy" />
+            <p>“Every detail felt luxurious—from the candlelight to the final amuse-bouche.”</p>
+            <strong>Olivia Chen</strong>
+            <span>Weekend anniversary dinner</span>
+          </article>
+          <article class="testimonial-card">
+            <img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=200&q=80" alt="Guest portrait" loading="lazy" />
+            <p>“The service was seamless and the tasting menu was pure poetry.”</p>
+            <strong>Marcus Hale</strong>
+            <span>Business celebration</span>
+          </article>
+          <article class="testimonial-card">
+            <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=200&q=80" alt="Guest portrait" loading="lazy" />
+            <p>“A rare place that feels both intimate and grand.”</p>
+            <strong>Nina Alvarez</strong>
+            <span>Private birthday dinner</span>
+          </article>
+        </div>
+      </section>
+
+      <section class="section benefits-section">
+        <div class="section-heading reveal">
+          <p class="eyebrow">Why Choose Us</p>
+          <h2>Every experience is curated to feel unmistakably elevated.</h2>
+        </div>
+        <div class="benefit-grid">
+          <article class="benefit-card reveal">
+            <h3>Fresh Ingredients</h3>
+            <p>Seasonal produce and premium imports define each plate.</p>
+          </article>
+          <article class="benefit-card reveal">
+            <h3>Luxury Dining</h3>
+            <p>Soft lighting, sculptural interiors, and tailored service.</p>
+          </article>
+          <article class="benefit-card reveal">
+            <h3>Professional Chefs</h3>
+            <p>Led by an experienced team that balances precision and warmth.</p>
+          </article>
+          <article class="benefit-card reveal">
+            <h3>Best Taste</h3>
+            <p>Complex, layered flavors delivered with understated confidence.</p>
+          </article>
+          <article class="benefit-card reveal">
+            <h3>Fast Service</h3>
+            <p>Thoughtful pacing that keeps the evening flowing smoothly.</p>
+          </article>
+          <article class="benefit-card reveal">
+            <h3>Live Music</h3>
+            <p>Evenings of jazz and curated soundscapes enhance every course.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section offers-section">
+        <div class="offers-banner reveal">
+          <div>
+            <p class="eyebrow">Special Offers</p>
+            <h2>Limited weekend experiences and chef surprises.</h2>
+          </div>
+          <div class="offer-cards">
+            <article class="offer-card">
+              <h3>Weekend Tasting</h3>
+              <p>Five courses with wine pairing for $95.</p>
+            </article>
+            <article class="offer-card">
+              <h3>Chef’s Table</h3>
+              <p>Reserve a front-row seat to the kitchen theatre.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section instagram-section">
+        <div class="section-heading reveal">
+          <p class="eyebrow">Instagram</p>
+          <h2>Follow the glow of our signature evenings.</h2>
+        </div>
+        <div class="instagram-grid">
+          <div class="insta-item reveal"><img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=800&q=80" alt="Luxury restaurant interior" loading="lazy" /></div>
+          <div class="insta-item reveal"><img src="https://images.unsplash.com/photo-1559339352-11d035aa65de?auto=format&fit=crop&w=800&q=80" alt="Dining experience" loading="lazy" /></div>
+          <div class="insta-item reveal"><img src="https://images.unsplash.com/photo-1547592180-85f173990554?auto=format&fit=crop&w=800&q=80" alt="Fine dining plate" loading="lazy" /></div>
+          <div class="insta-item reveal"><img src="https://images.unsplash.com/photo-1551218808-94e220e084d2?auto=format&fit=crop&w=800&q=80" alt="Chef plating dish" loading="lazy" /></div>
+        </div>
+      </section>
+
+      <section class="section newsletter-section">
+        <div class="newsletter-card reveal">
+          <h2>Join the private list for chef events and seasonal menus.</h2>
+          <form class="newsletter-form" id="newsletter-form">
+            <input type="email" placeholder="Email address" required />
+            <button class="btn btn-primary" type="submit">Subscribe</button>
+          </form>
+          <p class="newsletter-message" id="newsletter-message"></p>
+        </div>
+      </section>
+    </main>
+
+    <section class="section contact-section" id="contact">
+      <div class="contact-card reveal">
+        <div>
+          <p class="eyebrow">Contact</p>
+          <h2>Visit us or reach out for private events.</h2>
+          <p>45 Avenue de l’Or, Paris • +33 1 42 88 91 10 • reservations@maisonetoile.com</p>
+        </div>
+        <div class="contact-details">
+          <div>
+            <h3>Hours</h3>
+            <p>Mon–Thu: 6pm–11pm</p>
+            <p>Fri–Sun: 5pm–12am</p>
+          </div>
+          <div>
+            <h3>Social</h3>
+            <p>Instagram • Facebook • X</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="site-footer">
+      <div class="footer-brand">
+        <a class="brand" href="#home">
+          <span class="brand-mark">ME</span>
+          <span>Maison Étoile</span>
+        </a>
+        <p>Luxury dining shaped by elegance, seasonality, and heartfelt hospitality.</p>
+      </div>
+      <div class="footer-links">
+        <a href="#about">About</a>
+        <a href="#menu">Menu</a>
+        <a href="#reservation">Reservation</a>
+        <a href="#contact">Contact</a>
+      </div>
+      <p class="copyright">© 2026 Maison Étoile. All rights reserved.</p>
+    </footer>
+
+    <button class="back-to-top" aria-label="Back to top">↑</button>
+
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
